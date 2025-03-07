@@ -60,6 +60,80 @@ Want to run this on your machine? it _should_ be as simple as `git clone`, `yarn
 
 想在您的机器上运行吗？它*应该*只需简单执行`git clone`，`yarn install`和`yarn start`。如果失败请告诉我。
 
+### 详细安装与运行指南 Detailed Installation and Running Guide
+
+#### 系统要求 System Requirements
+
+- Node.js 14.0+
+- npm 6.0+ 或 yarn 1.22+
+- 现代浏览器（支持 ES6 和 Canvas/SVG）
+
+#### 安装步骤 Installation Steps
+
+1. **克隆仓库 Clone the repository**
+
+   ```bash
+   git clone https://github.com/username/waveforms.git
+   cd waveforms
+   ```
+
+2. **安装依赖 Install dependencies**
+
+   ```bash
+   # 使用yarn
+   yarn install
+
+   # 或使用npm
+   npm install
+   ```
+
+3. **启动开发服务器 Start development server**
+
+   ```bash
+   # 使用yarn
+   yarn start
+
+   # 或使用npm
+   npm start
+   ```
+
+   开发服务器将在 http://localhost:3000 启动
+
+#### 构建生产版本 Build for Production
+
+```bash
+# 使用yarn
+yarn build
+
+# 或使用npm
+npm run build
+```
+
+#### 常见问题排查 Troubleshooting
+
+- **依赖安装失败 Dependency installation fails**
+
+  - 尝试删除 node_modules 文件夹并重新安装
+  - 确保您使用的 Node.js 版本兼容
+
+- **开发服务器启动失败 Development server fails to start**
+
+  - 检查端口 3000 是否已被占用
+  - 查看控制台错误信息，确认所有依赖都已正确安装
+
+- **渲染问题 Rendering issues**
+  - 确保您的浏览器支持现代 Canvas 和 SVG API
+  - 尝试禁用浏览器扩展，特别是与内容或脚本相关的扩展
+
+#### 环境变量 Environment Variables
+
+创建`.env`文件自定义以下变量（可选）:
+
+```
+REACT_APP_AUDIO_ENABLED=true
+REACT_APP_DEFAULT_WAVEFORM=sine
+```
+
 ### Contributing 贡献
 
 Please open issues describing changes you'd like to contribute before spending any time working on them; this is a personal side-project, and I open-sourced it primarily as an educational thing, for those curious how it was built. I'm not actively seeking external contributions, and there would be a bit of friction (this repo is no longer the "source of truth" for the project, as it lives on The Pudding).
